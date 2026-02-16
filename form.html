@@ -7,21 +7,21 @@
 </head>
 <body>
     <h3>Registration Form</h3>
-    <form action="#" method="post">
+    <form action="abc.html" method="post">
         <label for="">Name:</label>
-        <input type="text" name="" id=""><br><br>
+        <input type="text" name="name" id="" minlength="2" maxlength="10" required><br><br>
         <label for="">Age</label>
-        <input type="number" name="" id=""><br><br>
+        <input type="number" name="age" id="" min="18" max="65"  required><br><br>
         <label for="">Email</label>
-        <input type="email" name="" id=""><br><br>
+        <input type="email" name="email" id="" required><br><br>
         <label for="">Password</label>
-        <input type="password" name="" id=""><br><br>
+        <input type="password" name="pwd" id="" pattern="[A-Za-z0-9]{8,12}" required><br><br>
         <label for="">Range</label>
-        <input type="range" name="" id=""><br><br>
+        <input type="range" name="rg" id=""><br><br>
         <label for="">Color</label>
-        <input type="color" name="" id=""><br><br>
+        <input type="color" name="clr" id=""><br><br>
         <label for="">Telephone no:</label>
-        <input type="tel" name="" id=""><br><br>
+        <input type="tel" name="" id="" pattern="[0-9]{10,12}"><br><br>
         <label for="">Gender</label>
         <input type="radio" name="g1" id="">Male
         <input type="radio" name="g1" id="">Female        
