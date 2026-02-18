@@ -1,0 +1,18 @@
+p {
+    color: blue;
+    background-color: bisque;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* id name */
+#txt {
+    color: cadetblue;
+}
+
+.box {
+    height: 300px;
+    width: 200px;
+    background-color: aqua;
+    color: brown;
+}
