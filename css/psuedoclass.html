@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Psuedo Classes */
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: brown;
+            border:2px solid black;
+            margin:10px;
+
+        }
+        .box:hover{
+            background-color: yellowgreen;
+            border-radius: 50%;
+        }
+        #txt:focus{
+            background-color: aqua;
+            color:orangered;
+        }
+        a:visited{
+            color:palevioletred;
+            /* text-decoration: underline dotted; */
+        }   
+    </style>
+</head>
+<body>
+    <a href="first.html" target="_blank">First Page</a>
+    <a href="#">Second</a>
+    <input type="text" name="txt" id="txt" value="Abc123">
+    <div class="box"></div>
+</body>
+</html>
