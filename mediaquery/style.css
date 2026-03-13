@@ -1,0 +1,19 @@
+.box{
+    height: 300px;
+    width: 300px;
+    border:2px solid black;
+    background-color: aquamarine;
+    margin:10px;
+    display: inline-block;
+}
+
+@media (min-width:500px) and (max-width:800px) {
+    .box{
+        display: block;
+        width: 98%;
+        /* height: 100px;
+        width: 100px;
+        background-color: blue; */
+    }
+}
+
