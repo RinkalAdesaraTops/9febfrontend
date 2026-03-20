@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+    <div class="box"></div>
+    <button onclick="changeBg()">Change BG</button>
+    <button id="btn1">Change Color</button>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+    <script>
+        $("#demo").html("<b>Hello</b>")
+        $("#demo1").text("<b>Hello</b>")
+        $("div").css("color", "red")
+        $("#demo").css("backgroundColor", "yellow")
+        $(".box").css({
+            color: "red",
+            backgroundColor: "blue",
+            border: "2px solid black",
+            height: "200px",
+            width: "200px",
+            margin: "10px"
+        })
+        function changeBg() {
+            $(".box").css("backgroundColor", "green")
+        }
+        $("#btn1").click(function () {
+            $(".box").css("backgroundColor", "orange")
+        })
+    </script>
+</body>
+
+</html>
