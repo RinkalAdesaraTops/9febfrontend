@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // logical op = && || !
+        let a=46
+        let b=60
+        let c=8
+        document.write('<br> a > b && a > c -- '+(a>b && a>c))
+        document.write('<br> a > b || a > c -- '+(a>b || a>c))
+        document.write('<br> ! a > b && a > c -- '+ !(a>b && a>c))
+        // type of operator
+        document.write('<br>numberic value '+typeof(56))
+        document.write('<br>numberic value '+typeof(56.78))
+        document.write('<br>character value '+typeof('R'))
+        document.write('<br>string value '+typeof("uytyu"))
+        let x
+        document.write('<br>x value '+typeof(x))
+        document.write('<br>boolean value '+typeof(true))
+        document.write('<br>boolean value '+typeof(false))
+        document.write('<br>array value '+typeof([10,20,30]))
+        document.write('<br>object value '+typeof({}))
+        // ternary operator - ?:
+        document.write((a>b)?"<br>A is max":"<br>B is max")
+        document.write((a%2==0)?"<br>A is Even no":"<br>B is odd no")
+
+    </script>
+</body>
+</html>

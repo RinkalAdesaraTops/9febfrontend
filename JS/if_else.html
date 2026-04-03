@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=34
+        let b=26
+        let c=45
+        if(a>b)
+            document.write('<br>A is maximum')
+        else 
+            document.write('<br>B is maximum')
+        let no=-56
+        // else if ladder
+        if(no>0){
+            document.write('<br>No is +ve')
+        } else if(no<0){
+            document.write('<br>No is -ve')
+        } else {
+            document.write('<br>No is zero')
+        }
+        // nested if - max from 3 variable 
+        // nested if - max from 4 variable 
+        if(a>b){
+            if(a>c){
+                document.write('<br>A is max')
+            } else {
+                document.write('<br>C is max')
+            }
+        } else {
+            if(b>c){
+                document.write('<br>B is max')
+            } else {
+                document.write('<br>C is max')
+            }
+        }
+    </script>
+</body>
+</html>
