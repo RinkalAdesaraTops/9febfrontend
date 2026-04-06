@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Count no of digits
+        // sum of digits
+        let no=3427 //3+4+2+7 
+        let count=0
+        let sum=0
+        while(no>0){ //342>0
+            let r=no%10 //342%10 = 2 34%10=4
+            no = Math.floor(no/10) //342/10=34.2
+            count++
+            sum+=r// sum = sum+r
+        }
+        document.write('<br>Count no of digits are = '+count)
+        document.write('<br>Sum of digits are = '+sum)
+
+    </script>
+</body>
+</html>

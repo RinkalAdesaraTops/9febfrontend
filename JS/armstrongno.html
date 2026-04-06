@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let no=135 //3+4+2+7 
+        let sum=0
+        let f=no
+        while(no>0){ //342>0
+            let r=no%10 //342%10 = 2 34%10=4
+            no = Math.floor(no/10) //342/10=34.2
+            sum+=(r**3)// sum = sum+r
+        }
+        document.write('<br>Sum of digits are = '+sum)
+        if(f==sum){
+            document.write('<br>It is armstrong no')
+        } else {
+            document.write('<br>It is not armstrong no')
+        }
+    </script>
+</body>
+</html>
