@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1) TNRN - take nothing return nothing
+        var add = () => {
+            let a = 20
+            let b = 10
+            document.write('<br>Addition is ' + (a + b))
+        }
+
+        // 2)TSRN - take something return nothing
+        const area = r => {
+            const pi = 3.14
+            document.write('<br>Area of circle is ' + (pi * r ** 2))
+        }
+
+        // 3)TNRS - take nothing return something
+        a = 5
+        b = 7
+        // fat arrow function
+        let mult = () => a * b
+        let cube = a => a**3
+        // 4)TSRS
+        
+        // function calling
+        add()
+        area(20)
+        ans = mult()
+        document.write('<br>Multiplication is ' + ans)
+        document.write('<br>Cube is ' + cube(5))
+        // document.write('<br>Multiplication is '+mult())
+        // let a = parseFloat(prompt("Enter radius:"))
+        // area(a)
+
+    </script>
+</body>
+
+</html>
