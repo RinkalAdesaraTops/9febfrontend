@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [34, 45, 23, 55]
+        document.write('<br>' + arr)
+        arr.push(100)
+        arr.push(60)
+        arr.push(30)
+        document.write('<br>' + arr)
+        arr.pop()
+        document.write('<br>' + arr)
+        arr.unshift(11, 22, 33)
+        document.write('<br>' + arr)
+        arr.shift()
+        document.write('<br>' + arr)
+        arr.splice(3, 2, 200, 300, 456)
+        // delete arr[4]
+        document.write('<br>' + arr)
+        // positionwise data get 
+        arr2 = arr.slice(4) //starting position
+        document.write('<br>' + arr2)
+        arr2 = arr.slice(3, 7) //start,ending(-1) position 
+        document.write('<br>' + arr2)
+        arr2 = arr.slice(-4) //starting position
+        document.write('<br>' + arr2)
+        arr2 = arr.slice(-7, -2) //start,ending(-1)  position //-2-1 = -3
+        document.write('<br>' + arr2)
+        arr_new = ["xyz", "jkl", "abc", "pqr"]
+        document.write('<br>ASc order =  ' + arr_new.sort())
+        document.write('<br>DeSc order =  ' + arr_new.reverse())
+        // compare function
+        // 22,33,34,200,300,456,55,100,60
+        document.write('<br>ASc order =  ' + arr.sort(function(a,b){
+            return a-b //22-33 = -11 200-55 = 
+            // return b-a
+        }))
+        document.write('<br>DeSc order =  ' + arr.reverse())
+    </script>
+</body>
+
+</html>
