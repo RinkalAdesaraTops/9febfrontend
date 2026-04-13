@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [2,3,4,5,4,8]
+        document.write('<br>'+arr)
+        // as a argument we can pass a function then it is called callback func.
+        let res = arr.map((i,index)=>i*2)
+        document.write('<br>'+res)
+        // Filter = return always array
+        let search = arr.filter((i,index)=>{
+                return i==4
+        })
+        console.log(search);
+        // Find - return single value
+        search = arr.find((i,index)=>{
+                return i==4
+        })
+        console.log(search);
+        // includes - return boolean value 
+        document.write('<br>'+arr.includes(8))
+        // reduce & reduceRight
+        // [2,3,4,5,4,8]
+        let sum = arr.reduceRight((a,b)=>{ //a=prev b=next value
+            // console.log("A is "+a);
+            // console.log("B is "+b);
+            return a+b
+        },100)
+        document.write('<br>Sum is '+sum)
+        arr = [22,33,12,45,10]
+        let max = arr.reduce((curr,max)=>{
+                if(max>curr){
+                    curr=max
+                }
+                return curr
+        })
+        document.write('<br>Maximum value is '+max)
+        // Some & every
+        res = arr.some((i)=>{
+            return i%2==0
+        })
+        console.log(res);
+        arr = [22,330,12,450,10]
+
+        res = arr.every((i)=>{
+            return i%2==0
+        })
+        console.log(res);
+        arr=["xyz","abc","xyz","pqr","xyz","jkl","pqr"]
+        // i={} j=xyz
+        ans = arr.reduce((i,j)=>{
+                if(!i[j]){
+                    i[j]=1
+                } else {
+                    i[j]++
+                }
+                return i
+        },{})
+        console.log(ans);
+        
+        // ans = {
+            // "xyz":3,
+            // "abc":2,
+            // "pqr":1,
+            // "jkl":1
+        // }
+
+    </script>
+</body>
+</html>

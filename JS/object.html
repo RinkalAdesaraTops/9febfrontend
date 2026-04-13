@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Object
+        let obj = {
+            "name":"ashdjfa",
+            age:22,
+            salary:45000,
+            disp:function(){
+                return this.name +"---"+this.salary
+            },
+            // getter method
+            get dispAge(){
+                return this.age
+            },
+            // setter method
+            set newAge(a){
+                this.age = a
+            }   
+
+        }
+        document.write('<br>Name & Salary is -- '+obj.disp( ))
+        document.write('<br>Old Age is '+obj.dispAge)
+        obj.newAge = 30
+        document.write('<br>New Age is '+obj.dispAge)
+        // for(var x in obj){
+        //     document.write('<br>'+x+' is '+obj[x])
+        // }
+        obj.salary = 56000
+        document.write('<br><hr>')
+        // insert
+        obj.lastname = "eteruyt"
+        //update 
+        obj.age = 35
+        //delete
+        // delete obj.age
+        // for(var x in obj){
+        //     document.write('<br>'+x+' is '+obj[x])
+        // }
+        // document.write('<br>Name is '+obj.name)
+        // document.write('<br>Age is '+obj['age'])
+
+    </script>
+</body>
+</html>
