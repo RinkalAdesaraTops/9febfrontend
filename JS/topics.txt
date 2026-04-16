@@ -1,0 +1,5 @@
+querySelector
+querySelectorAll
+EventListener
+spreading,merging,Destructuring
+api_fetch_then

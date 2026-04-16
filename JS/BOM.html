@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="txt">Hii</div>
+    <div id="demo"></div>
+    <hr>
+    <span id="hour">00</span> :
+    <span id="min">00</span>  :
+    <span id="sec">00</span>
+    <script>
+        let s=0
+        let m=0
+        let a=setInterval(()=>{
+            document.getElementById('sec').innerHTML = ++s
+            if(s>=10){
+                document.getElementById('min').innerHTML = ++m
+                s=0
+            }            
+        },1000)
+        
+        // Browser object model
+        // setTimeout & setInterval
+        const add = ()=>{
+            let a=56
+            let b=20
+            document.getElementById('demo').innerHTML = "Addition is "+(a+b)
+            
+            // document.write('<br>Addition is '+(a+b))
+        }
+        setTimeout(()=>{
+            document.getElementById('txt').innerHTML = "<b>Hello</b>"
+            add()
+            clearInterval(a)
+        },3000)
+
+
+        
+    </script>
+</body>
+</html>

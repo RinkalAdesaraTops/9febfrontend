@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color:red
+        }
+        .abc{
+            color:blue
+        }
+        #demo{
+            color:aqua
+        }
+    </style>
+</head>
+
+<body>
+    <div  class="abc" id="demo">hfghfg</div>
+    <div class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime sunt fuga voluptate
+        excepturi quam, distinctio nisi quas voluptatem aliquid sapiente nam aut vero quaerat ad ipsa, inventore, optio
+        temporibus!</div>
+    <div class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime sunt fuga voluptate
+        excepturi quam, distinctio nisi quas voluptatem aliquid sapiente nam aut vero quaerat ad ipsa, inventore, optio
+        temporibus!</div>
+    <div class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime sunt fuga voluptate
+        excepturi quam, distinctio nisi quas voluptatem aliquid sapiente nam aut vero quaerat ad ipsa, inventore, optio
+        temporibus!</div>
+    <div class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime sunt fuga voluptate
+        excepturi quam, distinctio nisi quas voluptatem aliquid sapiente nam aut vero quaerat ad ipsa, inventore, optio
+        temporibus!</div>
+    <div class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto maxime sunt fuga voluptate
+        excepturi quam, distinctio nisi quas voluptatem aliquid sapiente nam aut vero quaerat ad ipsa, inventore, optio
+        temporibus!</div>
+    <script>
+        // document.getElementsByName
+        document.getElementById('demo').innerHTML = "<b>Hello</b>"
+        document.getElementById('demo').style.color = "red"
+        document.getElementById('demo').style.backgroundColor = "yellowgreen"
+        // let a = document.getElementsByClassName('abc')
+        let a = document.getElementsByTagName('div')
+        console.log(a);
+        for(let i=0;i<a.length;i++){
+            if(i%2==0){
+                a[i].style.color="blue"
+            } else {
+                a[i].style.color="pink"
+            }
+        }
+        // // a[0].style.color = 'blue'
+    </script>
+</body>
+
+</html>
