@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <ul>
+            <li>shdgf</li>
+            <li>shdgf</li>
+            <li>shdgf</li>
+            <li>shdgf</li>
+        </ul>
+    <div id="txt"></div>
+    <script>
+        let btn = document.createElement("button")
+        console.log(btn);
+        let b = document.createTextNode("Add")
+        btn.appendChild(b)
+        console.log(btn);
+        document.getElementById('txt').append(btn)
+        btn.addEventListener("click",()=>{
+            alert("Hello")
+        })
+        // ul-li 
+    </script>
+</body>
+</html>
