@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr = [34,45,56,66,77,24]
+        let arr1 = [100,200,300]
+        //es6 ... spread operator
+        let merge_arr = [...arr,...arr1]
+        console.log(merge_arr);
+        //Rest of operator ...
+        //Array Destructuring
+        let [a,b,...c] = arr
+        document.write('<br>A is '+a)
+        document.write('<br>B is '+b)
+        document.write('<br>C is '+c)
+        
+        //Object Destructuring
+        let emp = {
+            name:"sfsf",
+            age:34,
+            salary:65000,
+            lastname:"euitye",
+            destignation:"Manager"
+        }
+        let {name,salary} = emp
+        document.write('<br>Name is '+name)
+        document.write('<br>Salary is '+salary)
+    </script>
+</body>
+</html>

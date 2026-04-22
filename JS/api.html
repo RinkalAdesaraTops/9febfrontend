@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>User Information</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="alldata"></tbody>
+    </table>
+    <script>
+        // API = application programming interface
+        let tr = ''
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(i => i.json())
+            .then(data => {
+                data.map((i)=>{
+                    // template literal
+                    tr += `<tr>
+                            <td>${i.id}</td>
+                            <td>${i.name}</td>
+                            <td>${i.email}</td>
+                            <td>${i.address.city}</td>
+                        </tr>`
+                    // tr += "<tr><td>"
+                    // tr+= i.id
+                    // tr += "</td>"
+                    // tr +="</tr>"
+                })
+                document.getElementById('alldata').innerHTML = tr
+            })
+           
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // synchronous
+        // callback hell problem = solution async-await & promises 
+        // async function abc(){
+        //     await adgf()
+        // }
+        const add = async()=>{
+            //code
+            await minus()
+        }
+        const minus = ()=>{
+            // dkfjghdjf error
+            multiply()
+        }
+        const multiply = ()=>{
+            division()
+        }
+        const division = ()=>{
+            // fgdfdgd
+        }
+
+        add()
+    </script>
+</body>
+</html>

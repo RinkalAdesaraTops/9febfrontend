@@ -3,3 +3,12 @@ querySelectorAll
 EventListener
 spreading,merging,Destructuring
 api_fetch_then
+oops
+callback hell,promises & async-await
+
+let obj = {
+    id:1,
+    name:"a"
+}
+ 
+obj.name = "b"
