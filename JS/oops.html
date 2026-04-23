@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class emp{
+            // default
+            // constructor(){
+            //     this.a = 10
+            //     this.b=20
+            // }
+            // parameterized
+            constructor(x,y){
+                this.a = x
+                this.b = y
+            }
+            add = ()=>{
+                document.write('<br>Addition is '+(this.a+this.b))
+            }
+            minus(){
+                document.write('<br>Minus is '+(this.a-this.b))
+            }
+        }
+        // let e1 = new emp()
+        // e1.add()
+        let e2 = new emp(34,20)
+        e2.add()
+        e2.minus()
+    </script>
+</body>
+</html>

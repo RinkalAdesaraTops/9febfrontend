@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        runtime dynamic binding
+        func. overriding -func name same & argument same but in parent & child class
+
+        compile/Static binding
+        func. overloading - func name same but arguments are different
+        */
+        class A {
+            constructor() {
+                console.log('Parent class');
+            }
+            disp(){
+                console.log('A disp called..');
+                
+            }
+        }
+        class B extends A{
+            constructor() {
+                super()
+                console.log('Child class');
+            }
+            disp(){
+                super.disp()
+                console.log('B disp called..');
+            }
+        }
+        let obj = new B()
+        obj.disp()
+       
+    </script>
+</body>
+
+</html>

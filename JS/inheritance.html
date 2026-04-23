@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Parent { //parent/super/base class
+            
+            constructor() {
+                console.log('parent class called..');
+                this.pi=3.14
+            }
+            area(r){
+                return this.pi*r**2
+            }
+
+        }
+        class Child extends Parent { //child/sub/derived class
+            constructor() {
+                super()
+                console.log('child class called..');
+            }
+            cube(a){
+                return a**3
+            }
+        }
+        class Abc extends Parent{
+
+        }
+        let obj = new Child()
+        document.write('<br>Area of circle is '+obj.area(20))
+        document.write('<br>Cube is '+obj.cube(4))
+        
+    </script>
+</body>
+
+</html>
