@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Add</button>
+    <script>
+        // Exception = error - user defined
+        // Exception handling = 
+        let a = 34
+        let b = 5
+        try {
+            //error generate
+            if (b > 0) {
+                document.write('<br>Division is ' + (a / b))
+            } else {
+                throw "Not divisible by zero"
+            }
+        }
+        catch (a) {
+            document.write('<br>Error generated -- ' + a)
+            //error - solution
+        }
+        finally {
+            //always code executed
+            document.write('<br>Addition is ' + (a + b))
+        }
+        // General logging
+        console.log("This is a standard message.");
+
+        // Warning message (yellow)
+        console.warn("This is a warning!");
+
+        // Error message (red)
+        console.error("This is an error!");
+
+        // Table display for arrays or objects
+        const users = [
+            { name: "John", age: 30 },
+            { name: "Jane", age: 25 }
+        ];
+        console.log(users);
+        
+        console.table(users);
+
+    </script>
+</body>
+
+</html>

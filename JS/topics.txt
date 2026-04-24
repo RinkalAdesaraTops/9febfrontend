@@ -5,13 +5,10 @@ spreading,merging,Destructuring
 api_fetch_then
 oops
 callback hell,promises & async-await
-localstorage CRUD
 try_catch_finally
 event bubbling & capturing
 log, warn, error, table
-
-
-
+localstorage CRUD
 let obj = {
     id:1,
     name:"a"
