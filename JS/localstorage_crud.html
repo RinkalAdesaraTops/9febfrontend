@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>User Information</h3>
+    <form action="#">
+        <label for="">Name:</label>
+        <input type="text" name="name" id="name"><br><br>
+        <label for="">Age:</label>
+        <input type="number" name="age" id="age"><br><br>
+        <label for="">Salary:</label>
+        <input type="number" name="salary" id="salary"><br><br>
+        <input type="button" value="Save" id="btn" onclick="saveData()">
+    </form>
+    <br><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Salary</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody id="alldata"></tbody>
+    </table>
+    <script>
+        let alldata = []
+        const saveData = () => {
+            // let n= $('#name').val()
+            let n = document.getElementById('name').value
+            let a = document.getElementById('age').value
+            let s = document.getElementById('salary').value
+            console.log(n, a, s);
+            // let arr = [
+            //     ...alldata,
+            //     {
+            //         "name": n,
+            //         "age": a,
+            //         "salary": s
+            //     }
+            // ]
+            alldata.push({
+                "name":n,
+                "age":a,
+                "salary":s
+            })
+            localStorage.setItem("userInfo", JSON.stringify(alldata))
+            disp()
+            document.getElementById('name').value = ''
+            document.getElementById('age').value = ''
+            document.getElementById('salary').value = ''
+        }
+        const disp = () => {
+            let data = JSON.parse(localStorage.getItem('userInfo'))
+            let tr = ''
+            data.map((i, index) => {
+                tr += `<tr>
+                        <td>${index + 1}</td>
+                        <td>${i.name}</td>
+                        <td>${i.age}</td>
+                        <td>${i.salary}</td>
+                        <td>
+                            <button onclick="delData(${index})">Delete</button>    
+                        </td>
+                        
+                    </tr>`
+            })
+            document.getElementById('alldata').innerHTML = tr
+        }
+        const delData = (id) => {
+            let data = JSON.parse(localStorage.getItem('userInfo'))
+            //0 1 2 4 == id=3
+            let res = data.filter((i, index) => {
+                return index != id
+            })
+            localStorage.setItem("userInfo", JSON.stringify(res))
+            disp()
+        }
+        disp()
+    </script>
+</body>
+
+</html>
