@@ -10,6 +10,7 @@
 <body>
     <h3>User Information</h3>
     <form action="#">
+        <input type="hidden" name="userid" id="userid">
         <label for="">Name:</label>
         <input type="text" name="name" id="name"><br><br>
         <label for="">Age:</label>
@@ -34,29 +35,36 @@
     <script>
         let alldata = []
         const saveData = () => {
-            // let n= $('#name').val()
             let n = document.getElementById('name').value
             let a = document.getElementById('age').value
             let s = document.getElementById('salary').value
-            console.log(n, a, s);
-            // let arr = [
-            //     ...alldata,
-            //     {
-            //         "name": n,
-            //         "age": a,
-            //         "salary": s
-            //     }
-            // ]
-            alldata.push({
-                "name":n,
-                "age":a,
-                "salary":s
-            })
+            let id = document.getElementById('userid').value
+
+            if (id !== '') {
+                //update
+                alldata = alldata.map((i,index)=>{
+                        if(index == id){
+                            i.name = n
+                            i.age = a
+                            i.salary = s
+                        }
+                        return i
+                })
+                // alldata = res
+            } else {
+                //insert
+                alldata.push({
+                    "name": n,
+                    "age": a,
+                    "salary": s
+                })
+            }
             localStorage.setItem("userInfo", JSON.stringify(alldata))
             disp()
             document.getElementById('name').value = ''
             document.getElementById('age').value = ''
             document.getElementById('salary').value = ''
+            document.getElementById('userid').value = ''
         }
         const disp = () => {
             let data = JSON.parse(localStorage.getItem('userInfo'))
@@ -68,6 +76,7 @@
                         <td>${i.age}</td>
                         <td>${i.salary}</td>
                         <td>
+                            <button onclick="editData(${index})">Edit</button>    
                             <button onclick="delData(${index})">Delete</button>    
                         </td>
                         
@@ -84,6 +93,18 @@
             localStorage.setItem("userInfo", JSON.stringify(res))
             disp()
         }
+        const editData = (id) => {
+            let data = JSON.parse(localStorage.getItem('userInfo'))
+            let res = data.find((i, index) => {
+                return index == id
+            })
+
+            document.getElementById('name').value = res.name
+            document.getElementById('age').value = res.age
+            document.getElementById('salary').value = res.salary
+            document.getElementById('userid').value = id
+        }
+
         disp()
     </script>
 </body>
