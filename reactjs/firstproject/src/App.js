@@ -5,6 +5,7 @@ import Secondcomponent from './Secondcomponent';
 import Thirdcomponent from './Thirdcomponent';
 import BootstrapExample from './BootstrapExample';
 import MaterialUiExample from './MaterialUiExample';
+import StyleComponentExample from './StyleComponentExample'
 
 function App() {
   let name="abcd"
@@ -16,7 +17,8 @@ function App() {
     //2) <Fragment></Fragment>
     <>
       <h3>First React Project</h3>
-      <MaterialUiExample />
+      <StyleComponentExample />
+      {/* <MaterialUiExample /> */}
       {/* <Thirdcomponent />
       <BootstrapExample /> */}
       {/* <Firstcomponent /> */}
