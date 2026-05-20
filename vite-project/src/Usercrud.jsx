@@ -11,7 +11,7 @@ const Usercrud = () => {
   };
   const saveData = (e) => {
     e.preventDefault();
-    if (id != "") {
+    if (id !== "") {
       //update
       let res = alldata.map((i,index)=>{
                   if(index==id){
@@ -37,11 +37,7 @@ const Usercrud = () => {
     setAge('')
     setSalary('')
   };
-  const delData = (id) => {
-    // 0 1 2 4 =  3
-    let res = alldata.filter((i, index) => index != id);
-    setAllData(res);
-  };
+   
   const editData = (id) => {
     let res = alldata.find((i, index) => index == id);
     setName(res.name);
