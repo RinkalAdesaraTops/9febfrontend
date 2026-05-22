@@ -27,7 +27,6 @@ const Apicrud = () => {
         .post("http://localhost:3000/users", data)
         .then(() => console.log("Data inserted.."));
     }
-
     disp();
     setData({
       name: "",
