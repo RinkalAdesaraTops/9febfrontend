@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import Countercomponent from './Countercomponent'
 import Usercrud from './Usercrud'
 import Empcomponent from './Empcomponent'
+import Apicrud from './Apicrud'
 // import './App.css'
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
      <h3>React+Vite example</h3>
      {/* <Countercomponent myname={name}/> */}
      {/* <Usercrud /> */}
-     <Empcomponent />
+     {/* <Empcomponent /> */}
+     <Apicrud />
     </>
   )
 }
