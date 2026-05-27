@@ -10,6 +10,7 @@ import LifecycleClass from './LifecycleClass'
 import LifecycleFunc from './LifecycleFunc'
 import Menu from './Menu'
 import { BrowserRouter, Routes,Route } from 'react-router'
+import UserComponent from './UserComponent'
 // import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/home' element={<Usercrud />}/>
           <Route path='/about' element={<LifecycleClass age="25"/>}/>
           <Route path='/contact' element={<LifecycleFunc />}/>
+          <Route path='/redux' element={<UserComponent />}/>
       </Routes>
     </BrowserRouter>
      <h3>React+Vite example</h3>
