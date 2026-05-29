@@ -21,18 +21,28 @@ const EmpRTKComponent = () => {
   };
   const saveData = (e) => {
     e.preventDefault();
-    if (id !== "") {
-        dispatch(updateFun({id,data}))
-    } else {
-      dispatch(addFun(data));
-    }
+    dispatch(addFun(data));
+    // if (id !== "") {
+    //     dispatch(updateFun({id,data}))
+    // } else {
+    //   dispatch(addFun(data));
+    // }
     setData({
       name: "",
       age: "",
       salary: ""
     });
-    setId("");
+   
   };
+  const updateData = ()=>{
+    dispatch(updateFun({id,data}))
+     setData({
+      name: "",
+      age: "",
+      salary: ""
+    });
+    setId("");
+  }
   const editData = (id) => {
     let res = alldata.find((i, index) => index == id);
     setData(res);
@@ -41,7 +51,7 @@ const EmpRTKComponent = () => {
   return (
     <div>
       <h1>User CRUD - Redux Example</h1>
-      <form action="#" method="post" onSubmit={saveData}>
+      <form action="#" method="post" onSubmit={(id!=='')?updateData:saveData}>
         Name:
         <input
           type="text"
