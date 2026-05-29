@@ -11,6 +11,7 @@ import LifecycleFunc from './LifecycleFunc'
 import Menu from './Menu'
 import { BrowserRouter, Routes,Route } from 'react-router'
 import UserComponent from './UserComponent'
+import EmpRTKComponent from './EmpRTKComponent'
 // import './App.css'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/about' element={<LifecycleClass age="25"/>}/>
           <Route path='/contact' element={<LifecycleFunc />}/>
           <Route path='/redux' element={<UserComponent />}/>
+          <Route path='/rtk' element={<EmpRTKComponent />}/>
       </Routes>
     </BrowserRouter>
      <h3>React+Vite example</h3>

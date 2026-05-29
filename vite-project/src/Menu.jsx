@@ -7,6 +7,7 @@ const Menu = () => {
       <a href="/about">About</a> ||
       <a href="/contact">Contact</a>
       <a href="/redux">Redux CRUD</a>
+      <a href="/rtk">Redux Toolkit CRUD</a>
     </div>
   )
 }

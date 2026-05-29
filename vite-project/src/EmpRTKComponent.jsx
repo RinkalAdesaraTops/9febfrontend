@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { delFun, insFun, updFun } from "./redux/UserAction";
+import { addFun, deleteFun, updateFun } from "./RTK/EmpReducer";
 
-const UserComponent = () => {
+const EmpRTKComponent = () => {
   const [data, setData] = useState({
     name: "",
     age: "",
     salary: "",
   });
-  const alldata = useSelector((state) => state.data);
+  const alldata = useSelector((state) => state.Emp.data);
   const dispatch = useDispatch();
   const [id, setId] = useState("");
   const handleChange = (e) => {
@@ -21,9 +22,9 @@ const UserComponent = () => {
   const saveData = (e) => {
     e.preventDefault();
     if (id !== "") {
-        dispatch(updFun(id,data))
+        dispatch(updateFun({id,data}))
     } else {
-      dispatch(insFun(data));
+      dispatch(addFun(data));
     }
     setData({
       name: "",
@@ -93,7 +94,7 @@ const UserComponent = () => {
                 <td>{i.salary}</td>
                 <td>
                   <button onClick={() => editData(index)}>Edit</button>
-                  <button onClick={() => dispatch(delFun(index))}>
+                  <button onClick={() => dispatch(deleteFun(index))}>
                     Delete
                   </button>
                 </td>
@@ -105,4 +106,4 @@ const UserComponent = () => {
     </div>
   );
 };
-export default UserComponent;
+export default EmpRTKComponent;
