@@ -35,7 +35,7 @@ const EmpRTKComponent = () => {
    
   };
   const updateData = (e)=>{
-     e.preventDefault();
+    e.preventDefault();
     dispatch(updateFun({id,data}))
      setData({
       name: "",
