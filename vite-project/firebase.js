@@ -16,3 +16,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 export {db}
+
+// firebase link
+// https://blog.openreplay.com/build-a-crud-app-with-react-and-firebase/
