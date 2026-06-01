@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
     "axios": "^1.16.1",
+    "firebase": "^12.14.0",
     "json-server": "^1.0.0-beta.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

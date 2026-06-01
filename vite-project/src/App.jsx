@@ -12,6 +12,7 @@ import Menu from './Menu'
 import { BrowserRouter, Routes,Route } from 'react-router'
 import UserComponent from './UserComponent'
 import EmpRTKComponent from './EmpRTKComponent'
+import FirebaseCRud from './FirebaseCRud'
 // import './App.css'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/contact' element={<LifecycleFunc />}/>
           <Route path='/redux' element={<UserComponent />}/>
           <Route path='/rtk' element={<EmpRTKComponent />}/>
+          <Route path='/fb' element={<FirebaseCRud />}/>
       </Routes>
     </BrowserRouter>
      <h3>React+Vite example</h3>
