@@ -1,0 +1,17 @@
+useState
+useEffect
+useCallback 
+useMemo
+useRef
+useContext
+
+useSelector
+useDispatch
+react - designing
+
+CRUD
+long,shortcut
+api crud- json server Axios 
+redux crud
+rtk crud
+firebase crud

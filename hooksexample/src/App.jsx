@@ -6,8 +6,11 @@ import RefExample from './RefExample'
 import ContextExample from './ContextExample'
 import UsecontextExample from './UsecontextExample'
 import ApiExample from './ApiExample'
+import CrudComponent from './CrudComponent'
+import Memoexample from './Memoexample'
 
 function App() {
+  const [status,setStatus] = useState(1)
   return (
     <>
     {/* useState & useEffect
@@ -20,7 +23,11 @@ function App() {
       {/* <RefExample /> */}
       {/* <ContextExample /> */}
       {/* <UsecontextExample /> */}
-      <ApiExample />
+      {/* <ApiExample /> */}
+      {/* <CrudComponent /> */}
+      {
+        (status)?<Memoexample />:<CrudComponent />
+      }
     </>
   )
 }
